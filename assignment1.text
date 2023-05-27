@@ -1,0 +1,105 @@
+moduel-1
+
+Q-1 what is the different between java & javascript?
+->   java is programming language
+->   javascript is scripting language
+
+->  java code run on browser and jvm
+->  javascript code run only on web browser
+
+-> java is static and strongly typed language
+->  javascript is smoothly and dynamically type language
+
+-> java code is independent
+-> javascript code is dependent and used with html and css
+
+
+
+
+
+q-2 what is javascript?
+->  javascript is an interpreted, client side ,event based object oriented scripting language
+->  javascript programming run by web browser
+
+
+
+
+
+q-3 what are the data type suppoted by javascript?
+->  (1) number
+->  (2) null
+->  (3) string 
+->  (4) symbol
+->  (5) boolean
+->  (6) bigint
+->  (7) undefined
+
+
+
+q-4 what are the scope of variable in javascript?
+->  (1) local scope
+    (2)  global scope
+    (3) block scope
+
+
+
+q-5 what is callback function?
+->  a callback function is a function pass into another function function as an argument
+
+
+
+q-6 what is closure?give an example
+->  osure refers to the combination of a function and the lexical environment within which that function was declared. 
+    It allows a function to access variables from its outer (enclosing) scope even after the outer function has finished executing.
+    In simpler terms, a closure "closes over" the variables it needs, preserving their values for future use.
+
+    function outerFunction() {
+  var outerVariable = 'Hello';
+
+  function innerFunction() {
+    console.log(outerVariable);
+  }
+
+  return innerFunction;
+}
+
+var closureExample = outerFunction();
+closureExample(); // Output: Hello
+
+
+
+
+q-7 what is the different between the operators '==' & '===' ?
+-> '==' compere the value
+   '===' compere both data type and value
+   ex
+   (1)'=='  -> x=20
+               y='20'   (true)
+
+   (2)'==='  -> (false)
+
+
+
+
+q-8 what is the different between null & undefined ?
+->  undefined represent value due to not being availble while null represent the intentional absence of any value
+ex  let x = null;
+    console.log(x);  output: null
+
+    let x;
+    console.log(x);   output :undefined
+
+
+
+
+
+
+q-9 what would be the result of 2 + 5 "3" ?
+==> 73
+
+
+
+
+q-10 what is the different between call & apply ?
+->    the different between call and apply argument are pass to the function the call method accept argument as a comma -separted list
+      and apply accept argument as an array
