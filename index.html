@@ -8,17 +8,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-    
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="/">Navbar</a>
+          <a class="navbar-brand" href="#">welcome to world clock</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="home">Home</a>
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Link</a>
@@ -46,12 +46,107 @@
         </div>
       </nav>
 
-      <h1>hello world!</h1>
+      <div class="container my-3">
+        <h1 class="text-center">welcome to world clock</h1>
+        <main>
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+              <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm border-secondary">
+                  <div class="card-header py-3 bg-primary">
+                    <h4 class="my-0 fw-normal">India</h4>
+                  </div>
+                  <div class="card-body ">
+                    <h1 class="card-title pricing-card-title" id="india"><h1>
+                    <ul class="list-unstyled mt-3 mb-4 fs-5">
+                      <li>india</li>
+                      <li>time</li>
+                      <li>zone</li>
+                    
+                    </ul>
+                    <button type="button" class="w-100 btn-lg btn-primary">more about this zone</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                  <div class="card-header py-3 border-primary">
+                    <h4 class="my-0 fw-normal">United states</h4>
+                  </div>
+                  <div class="card-body">
+                    <h1 class="card-title pricing-card-title " id="usa"></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>usa</li>
+                      <li>time</li>
+                      <li>zone</li>
+                     
+                    </ul>
+                    <button type="button" class="w-100 btn btn-lg btn-outline-primary">more about this zone</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                  <div class="card-header py-3 text-black  border-primary">
+                    <h4 class="my-0 fw-normal">China</h4>
+                  </div>
+                  <div class="card-body">
+                    <h1 class="card-title pricing-card-title" id="china"></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>china</li>
+                      <li>time</li>
+                      <li>zone</li>
+                     
+                    </ul>
+                    <button type="button" class="w-100 btn btn-lg btn-outline-primary">more about this zone</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            
+          </main>
 
+          <label for="appt">Select a time for your alarm:</label>
+<input type="time" id="alarm" name="alarm">
+      </div>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
+<script>
+    const updatetime = ()=>{
+    let d = new Date()
+   usa.innerHTML=d. toLocaleString('en-US', {
+    timeZone: 'America/Los_Angeles',
+   }).split(", ")[1]
+
+   india.innerHTML=d. toLocaleString('en-US', {
+    timeZone: 'Asia/Kolkata',
+   }).split(", ")[1]
+
+   china.innerHTML=d. toLocaleString('en-US', {
+    timeZone: 'Asia/Shanghai',
+   }).split(", ")[1]
+
+    
+   let alarmhour= alarm.value.split(":")[0]
+   let alarmmin = alarm.value.split(":")[1]
+
+  //  console.log(d.getHours(),alarmhour);
+  //  console.log(d.getMinutes(),alarmmin);
+
+   if(d.getHours()==alarmhour && d.getMinutes()== alarmmin){
+    // console.log("alarm is ringing");
+    let audiourl = "https://file-examples.com/storage/fe629099fc646eff79529f9/2017/11/file_example_WAV_10MG.wav"
+    var audio = new Audio(audiourl);
+     audio.play();
+   }
+}
+setInterval(updatetime,1000);
+
+
+</script>
 </body>
 </html>
