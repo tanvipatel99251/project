@@ -1,0 +1,16 @@
+(1)what is express js?
+->Express.js is a popular web application framework for Node.js. 
+It provides a simple and minimalistic approach to building web applications and APIs
+
+(1)Routing: Express.js provides a routing mechanism that allows you to define routes for handling HTTP requests. You can specify
+ different HTTP methods (such as GET, POST, PUT, DELETE) 
+
+(2)Middleware: Middleware functions in Express.js are functions that have access to the request and response objects,
+ and they can perform operations in between the request and response cycle
+
+(3)template engines   : Handlebars to generate dynamic HTML pages on the server-side.
+
+(4)Error Handling: Express.js provides mechanisms to handle errors that occur during the request-response cycle. 
+
+(5)Static File Serving: Express.js allows you to serve static files such as HTML, CSS,
+ and images directly from a directory using the express.static middleware. 
