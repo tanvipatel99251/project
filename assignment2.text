@@ -1,0 +1,52 @@
+(1)  what is node js ? where can you use it?
+->   Node.js is a runtime environment that allows you to run JavaScript on the server-side or for network applications.
+     It enables running JavaScript on the server-side, 
+     bringing uniformity between the server and client-side for handling business logic.
+
+     Server-side web applications: Node.js allows you to create web servers and develop websites and web apps using JavaScript.
+      This means you can use JavaScript for both front-end and back-end development, providing a more consistent development experience.
+
+
+(2) explain callback in node js?
+->a callback is a function that is passed as an argument to another function and is executed at a later point in time or
+ when a certain condition is met. It allows you to define asynchronous behavior in your code.
+ /(1) callback
+
+const add =(a,b,callback)=>{
+callback(a+b)
+}
+const square = (a,callback)=>{
+ callback(a*a)
+}
+
+
+
+add(10,20,(result)=>{
+    console.log(result);
+    
+square(result,(data)=>{
+    console.log(data);
+    })
+ })
+
+
+
+(3) what are the advantage of using promises instead of callback?
+->   readability: Promises offer code that is easier to read and understand. The structure of promises organizes the code in a clear manner, 
+   
+     simplicity: Promises provide a simpler alternative to handling asynchronous operations compared to nested callbacks
+
+     Error Handling: Promises come with built-in error handling capabilities. With the catch block, we can effectively handle and manage errors in promises.
+
+
+(4) what is npm ?
+->  NPM (Node Package Manager)
+
+   NPM manages collections of code and libraries called "packages." 
+   It stores and installs these packages into a folder called "node_modules" within your project. 
+   You can then use these packages in your project code.
+
+(5)what are the moduel in node js? explain
+-> (1) core moduel
+   (2)  own moduel
+   (3) third party moduel
